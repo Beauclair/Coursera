@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+		</style>
+	</head>
+	<body onload="addValue()">
+		<div id="div1"></div>
+		<input type="button" value="Add Value" id="btn">
+	</body>
+	<script>
+		var div = document.getElementById("div1");
+		var btn = document.getElementById("btn");
+		btn.onclick = function addValue(){
+			var para = document.createElement("p");
+			var text = document.createTextNode("Hello word");
+			para.appendChild(text);
+			div.appendChild(para);
+		}
+	</script>
+</html>

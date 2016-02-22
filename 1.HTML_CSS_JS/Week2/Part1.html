@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var color = ["Lavender","Weat", "Ivory", "Cyan", "Silver", "OldLace", "Brown", "Chocolate", "Teal", "SkyBlue"];
+			var finished = false;
+			var nbr_guest = 0;
+			
+			function do_game(){
+				var random_number = Math.random()*10;
+				var random_number_interger = Math.floor(random_number);
+				target = color[random_number_interger];
+				while(!finished){
+					guess_input = prompt("I am thinking of one of these colors : \n\n"
+					+ color.join()+ "\n\n" + "What color I thinkimg of?");
+					if(guess_input==null) return;
+					nbr_guest++;
+					if(guess_input==target) return;
+					finished = false;
+					
+				}
+			}
+		</script>
+	</head>
+
+	<body onload="do_game()">
+		
+	</body>
+	
+</html>
+

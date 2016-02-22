@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            p{
+                color:red;
+            }
+        </style>
+    </head>
+    <body onload="test()">
+        <div id="firstDiv"></div>
+        <input type="button" value="Add Text" id="firstButton">
+    </body>
+    <script>
+        var firstDiv = document.getElementById("firstDiv");
+        var firstButton = document.getElementById("firstButton");
+        firstButton.onclick = function test(){
+            var para = document.createElement("p");
+            var text = document.createTextNode("Hello world");
+            para.appendChild(text);
+            firstDiv.appendChild(para);
+        } 
+    </script>
+</html>
